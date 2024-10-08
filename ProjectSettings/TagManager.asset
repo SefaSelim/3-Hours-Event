@@ -7,6 +7,10 @@ TagManager:
   - hitcollider
   - Knife
   - WoodPlank
+  - SpaceShip
+  - Bullet
+  - Enemy
+  - Base
   layers:
   - Default
   - TransparentFX
