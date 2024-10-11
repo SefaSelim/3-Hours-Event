@@ -5,24 +5,28 @@ using UnityEngine;
 public class SpaceShip : MonoBehaviour
 {
     public float playerSpeed;
-    public float atis_hizi; // x saniyede bir
+    public float atis_hizi = 0.30f; // x saniyede bir
     public float bulletDamage;
     [SerializeField]
     GameObject bulletprefab;
     [SerializeField]
     public GameObject spawner;
+    
 
     private Vector3 spawnPoint;
     void Start()
     {   
-        StartCoroutine(FireBullet());
-
+        
+         StartCoroutine(FireBullet());
+        
     }
 
     void Update()
     {
         float move = Input.GetAxis("Horizontal") * playerSpeed * Time.deltaTime;
         transform.Translate(move,0,0);
+
+       
 
     }
 
@@ -37,4 +41,5 @@ public class SpaceShip : MonoBehaviour
         }
 
     }
+    
 }

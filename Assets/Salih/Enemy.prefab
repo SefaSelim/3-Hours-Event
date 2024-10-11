@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4064859395849151407}
   - component: {fileID: 4002801605854522555}
   - component: {fileID: 4398236334598116017}
+  - component: {fileID: 5230114308011628599}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -148,4 +149,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  PlayerSC: {fileID: 4485241553797558333, guid: f3c18e7e36566814194a88e78baaf077, type: 3}
+  PlayerSC: {fileID: 7517799810898105547, guid: c401a22b387b0ec4da59785851d46262, type: 3}
+  playerLevel: {fileID: 2515467765693664844, guid: c401a22b387b0ec4da59785851d46262, type: 3}
+  score: {fileID: 4934993988114501975, guid: 3c9c4c3268790e74890fed7ff9471e4b, type: 3}
+  enemyexp: 20
+  enemyscore: 20
+--- !u!50 &5230114308011628599
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3830347190333550026}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
