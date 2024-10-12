@@ -6,6 +6,10 @@ public class EnemySC : MonoBehaviour
 {
     public float health;
     public SpaceShip PlayerSC; //script adı değişti o yüzden spaceship
+    public PlayerLevel playerLevel;
+    public Score score;
+    public float enemyexp = 20;
+    public float enemyscore = 20;
     void Start()
     {
         
@@ -31,7 +35,11 @@ public class EnemySC : MonoBehaviour
         
         if(health <= 0)
         {
+            playerLevel.PlayetGetsExp(enemyexp);
+            score.AddScore(enemyscore);
+
             Destroy(gameObject);
+
         }
     }
 

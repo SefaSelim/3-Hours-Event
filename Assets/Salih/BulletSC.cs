@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletSC : MonoBehaviour
 {
     public SpaceShip playerSC; //adında değişiklik oldu o yüaden spaceship ama PlayerSC bu
-    private float bulletSpeed = 10;
+    public float bulletSpeed = 10;
     void Start()
     {
         
