@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WoodPlankRotate : MonoBehaviour
 {
+    public int score;
     public float RotationSpeed;
     void Update()
     {
