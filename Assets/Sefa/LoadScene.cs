@@ -8,5 +8,6 @@ public class LoadScene : MonoBehaviour
    public void LoadSefaScene()
    {
       SceneManager.LoadScene("SefaMainScene");
+      
    }
 }
