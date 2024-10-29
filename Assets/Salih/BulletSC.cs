@@ -5,17 +5,22 @@ using UnityEngine;
 public class BulletSC : MonoBehaviour
 {
     public SpaceShip playerSC; //adında değişiklik oldu o yüaden spaceship ama PlayerSC bu
-    public float bulletSpeed = 10;
-    void Start()
-    {
-        
-    }
+    public float bulletSpeed;
+    public Animator Animator;
 
+    private bool ok = true;
+    
+    void destroygameobject()
+    {
+        Destroy(gameObject);
+    }
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Destroy(gameObject);
+            Animator.Play("BulletAnim");
+            ok = false;
+            Invoke("destroygameobject",1f);
         }
     }
     void Update()
@@ -25,6 +30,10 @@ public class BulletSC : MonoBehaviour
             Destroy(gameObject);
         }
 
-        transform.Translate(0, bulletSpeed*Time.deltaTime ,0);
+        if (ok)
+        {
+            transform.Translate(0, bulletSpeed*Time.deltaTime ,0);
+        }
+      
     }
 }
