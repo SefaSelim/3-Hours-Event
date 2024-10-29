@@ -11,14 +11,17 @@ public class SpaceShip : MonoBehaviour
     GameObject bulletprefab;
     [SerializeField]
     public GameObject spawner;
+
+    private AudioSource audioSource;
     
 
     private Vector3 spawnPoint;
     void Start()
     {   
         
+         audioSource = GetComponent<AudioSource>();
          StartCoroutine(FireBullet());
-        
+
     }
 
     void Update()
@@ -35,7 +38,11 @@ public class SpaceShip : MonoBehaviour
         while (true)
         {
             spawnPoint = spawner.transform.position;
-            Instantiate(bulletprefab,spawnPoint,Quaternion.identity);
+            if (Input.GetKey(KeyCode.Space))
+            {
+                audioSource.Play();
+                Instantiate(bulletprefab,spawnPoint,Quaternion.identity);
+            }
             Debug.Log("aTEŞ");
             yield return new WaitForSeconds(atis_hizi);
         }

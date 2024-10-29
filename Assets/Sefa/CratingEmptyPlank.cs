@@ -25,7 +25,7 @@ public class DestroyAllChildren : MonoBehaviour
             {
                 Destroy(child.gameObject);
             }
-            KnifeColliderController.knifenum = 17;
+          // ERROR  knifeColliderController.knifenum = 17;
             maxwoodplankscore+=17;
         
 
